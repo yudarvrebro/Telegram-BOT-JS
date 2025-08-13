@@ -19,7 +19,7 @@
 - Next we create a BOT_TOKEN so that no one can see it and recognize it -
   Settings => Variables => Add => name it BOT_TOKEN => and assign it the value of the token that the bot issued - @BotFather 
 - Let's create a KV storage to store received user messages -
-  Cloudflare => Workers => твой Worker => Settings => Bindings => KV Namespace => we call it - MESSAGES
+  Cloudflare => Workers => your Worker => Settings => Bindings => KV Namespace => we call it - MESSAGES
 - Connecting KV to WORKER -
   Worker => Bindings => Add Bindings => KV - MESSAGES
 - we paste the code into our worker and get the admin panel (It is worth checking for errors - HTTP should be 200)
