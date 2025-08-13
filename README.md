@@ -23,6 +23,7 @@
 - Connecting KV to WORKER -
   Worker => Bindings => Add Bindings => KV - MESSAGES
 - we paste the code into our worker and get the admin panel (It is worth checking for errors - HTTP should be 200)
+- you need to pass webhook https://api.telegram.org/bot<TOKEN>/setWebhook?url=<URL_YOUR_WORKER>/webhook
 
 # Key lines of code:
 
