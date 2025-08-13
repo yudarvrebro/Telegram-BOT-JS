@@ -24,7 +24,7 @@
   Worker => Bindings => Add Bindings => KV - MESSAGES
 - we paste the code into our worker and get the admin panel (It is worth checking for errors - HTTP should be 200)
 
-№ Key lines of code:
+# Key lines of code:
 
   1) Processing webhook from Telegram
      --- if (path === "/webhook" && request.method === "POST") {
