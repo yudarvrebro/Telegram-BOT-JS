@@ -58,3 +58,5 @@ From the admin panel:
 
 <img width="1498" height="500" alt="98576294" src="https://github.com/user-attachments/assets/eb3b037a-f04f-4f93-9c95-b3aae0b3d8b5" />
 
+
+# My video profile - https://guns.lol/yudarvrebro
