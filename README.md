@@ -27,35 +27,34 @@
 № Key lines of code:
 
   1) Processing webhook from Telegram
-     if (path === "/webhook" && request.method === "POST") {
+     --- if (path === "/webhook" && request.method === "POST") {
   2) Check for first message
-     if (typeof textOrCaption === "string" && textOrCaption.trim().startsWith("/start")) {
+     --- if (typeof textOrCaption === "string" && textOrCaption.trim().startsWith("/start")) {
   3) Blocking duplicate messages
-     if (await env.MESSAGES.get(`sent:${userId}`)) {
+     --- if (await env.MESSAGES.get(`sent:${userId}`)) {
   4) Saving message data
-     await env.MESSAGES.put(`msg:${userId}`, JSON.stringify(record));
+     --- await env.MESSAGES.put(`msg:${userId}`, JSON.stringify(record));
   5) Collecting attachments
-     const largest = msg.photo[msg.photo.length - 1];
+     --- const largest = msg.photo[msg.photo.length - 1];
   6) Generate URL files
-     f.url = `https://api.telegram.org/file/bot${env.BOT_TOKEN}/${tgJson.result.file_path}`;
+     --- f.url = `https://api.telegram.org/file/bot${env.BOT_TOKEN}/${tgJson.result.file_path}`;
   7) Sending to Telegram
-     await fetch(`https://api.telegram.org/bot${token}/sendMessage`, ...)
+     --- await fetch(`https://api.telegram.org/bot${token}/sendMessage`, ...)
   8) Admin panel
-     return new Response(ADMIN_HTML, { headers: { "Content-Type": "text/html; charset=UTF-8" } });
-  9) Deleting a user![Uploading u48yt348ur.jpg…]()
-
-     await env.MESSAGES.delete(`msg:${userId}`);
+     --- return new Response(ADMIN_HTML, { headers: { "Content-Type": "text/html; charset=UTF-8" } });
+  9) Deleting a user
+     --- await env.MESSAGES.delete(`msg:${userId}`);
   10) CORS headers
-      "Access-Control-Allow-Origin": "*",
+     ---"Access-Control-Allow-Origin": "*",
 
 # As a result, we get an antispam bot that accepts and saves in KV only 1 user message:
 
 From the user's side:
 
-<img width="608" height="782" alt="483y38744384" src="https://github.com/user-attachments/assets/442681f4-a439-4246-9b1b-fce5a9012fb5" />
+<img width="608" height="500" alt="483y38744384" src="https://github.com/user-attachments/assets/442681f4-a439-4246-9b1b-fce5a9012fb5" />
 
 
 From the admin panel:
 
-<img width="1498" height="901" alt="98576294" src="https://github.com/user-attachments/assets/eb3b037a-f04f-4f93-9c95-b3aae0b3d8b5" />
+<img width="1498" height="500" alt="98576294" src="https://github.com/user-attachments/assets/eb3b037a-f04f-4f93-9c95-b3aae0b3d8b5" />
 
